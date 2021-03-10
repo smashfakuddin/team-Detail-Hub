@@ -48,8 +48,15 @@ h1{
 @media only screen and (max-width: 868px) {
     .detail-cart {
      flex-direction: column;
+     width: 100%;
     }
     .social-media{
         margin-left: 25%;
+    }
+    .team-detail{
+        padding-left: 0;
+    }
+    .team-detail p{
+        padding-left: 60px;
     }
   }
