@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
 import './Header.css'
 
 const Header = () => {
+  
     return (
         <div class='header'>
-            <h1>Team Tracker</h1>
+            <h1>Team Detail</h1>
         </div>
     );
 };

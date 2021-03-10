@@ -29,6 +29,21 @@
 h1{
     color: rgb(243, 230, 230);
 }
+.social-media {
+    list-style: none;
+    display: flex;
+    margin-top: 50px;
+    margin-left: 25%;
+    width: 150px;
+    background-color: rgb(252, 247, 247);
+    border-radius: 10px;
+}
+.social-media li{
+    margin-left: 15px;
+    cursor: pointer;  
+    font-size: 30px;
+    height: 40px;
+}
 
 @media only screen and (max-width: 868px) {
     .detail-cart {

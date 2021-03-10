@@ -1,12 +1,11 @@
-.header{
+.detail-header{
     height: 350px;
     background-image: url(../../Photo/background.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     text-align: center;  
-    opacity: .8; 
+    /* opacity: ;  */
 }
-.header h1{
-    padding-top: 125px;
-    color: rgb(1, 2, 14);
+.detail-header img{
+    padding-top: 75px;
 }

@@ -9,14 +9,16 @@ import {
 } from "react-router-dom";
 
 
+
 function App() {
   return (
     <div> 
           
       <Router>
-      <Header></Header>
+      
       <Switch>
           <Route exact path="/">
+          <Header></Header>
           <TeamCard></TeamCard>
           </Route>
           <Route path='/team/:idTeam'>
