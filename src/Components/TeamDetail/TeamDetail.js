@@ -19,7 +19,7 @@ const TeamDetail = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setTeamDetail(data));
-    }, []);
+    }, [idTeam]);
     if (!teamDetail.teams) { return null }
 
     return (
