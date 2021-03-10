@@ -6,16 +6,15 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 
 function App() {
   return (
     <div> 
-      <Header></Header>
           
       <Router>
+      <Header></Header>
       <Switch>
           <Route exact path="/">
           <TeamCard></TeamCard>
