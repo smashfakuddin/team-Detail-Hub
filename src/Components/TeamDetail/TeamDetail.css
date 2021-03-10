@@ -27,13 +27,13 @@
     color: rgb(224, 205, 205);
 }
 h1{
-    color: rgb(243, 230, 230);
+    color: rgb(233, 222, 222);
 }
 .social-media {
     list-style: none;
     display: flex;
     margin-top: 50px;
-    margin-left: 25%;
+    margin-left: 35%;
     width: 150px;
     background-color: rgb(252, 247, 247);
     border-radius: 10px;
@@ -48,5 +48,8 @@ h1{
 @media only screen and (max-width: 868px) {
     .detail-cart {
      flex-direction: column;
+    }
+    .social-media{
+        margin-left: 25%;
     }
   }

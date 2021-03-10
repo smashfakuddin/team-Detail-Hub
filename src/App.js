@@ -7,26 +7,26 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import NotFound from './Components/NotFound/NotFound';
 
 
 
 function App() {
   return (
-    <div> 
-          
+    <div>
+
       <Router>
-      
-      <Switch>
+        <Switch>
           <Route exact path="/">
-          <Header></Header>
-          <TeamCard></TeamCard>
+            <Header></Header>
+            <TeamCard></TeamCard>
           </Route>
           <Route path='/team/:idTeam'>
             <TeamDetail></TeamDetail>
-                
           </Route>
-          
-          
+          <Route path='*'>
+            <NotFound></NotFound>
+          </Route>
         </Switch>
       </Router>
     </div>

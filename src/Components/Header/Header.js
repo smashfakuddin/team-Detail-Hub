@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import './Header.css'
 
@@ -6,7 +6,7 @@ const Header = () => {
   
     return (
         <div class='header'>
-            <h1>Team Detail</h1>
+            <h1>Club DetailHub</h1>
         </div>
     );
 };
