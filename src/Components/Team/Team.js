@@ -15,7 +15,7 @@ const Team = (props) => {
     }
 
     return (
-        <div className="col-sm  teamCart ">
+        <div className="col-sm ml-5 pl-2 teamCart ">
             <img width='250px' src={strTeamBadge} alt="" />
             <h4>{strTeam}</h4>
             <h6>Sport Type: {strSport}</h6>
