@@ -1,6 +1,9 @@
 .header{
     height: 300px;
     background-color: gray;
-    text-align: center;
-   
+    text-align: center;   
+}
+.header h1{
+    padding-top: 125px;
+    color: rgb(233, 219, 219);
 }

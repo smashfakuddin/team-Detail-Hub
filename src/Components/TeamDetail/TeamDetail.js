@@ -23,13 +23,13 @@ const TeamDetail = () => {
             <div className='detail-cart'>
                 <div>
                     <h1>{teamDetail.teams[0].strTeam}</h1>
-                    <p><img width='15' src={founded} alt=""/> Founded: {teamDetail.teams[0].intFormedYear}</p>
-                    <p><img width='15' src={countryIcon} alt=""/> Country: {teamDetail.teams[0].strCountry}</p>
-                    <p><img width='15' src={sportType} alt=""/> Sport Type: {teamDetail.teams[0].strSport}</p>
-                    <p><img width='15' src={genderIcon} alt=""/> Gender: {teamDetail.teams[0].strGender}</p>
+                    <h6><img width='15' src={founded} alt=""/> Founded: {teamDetail.teams[0].intFormedYear}</h6>
+                    <h6><img width='15' src={countryIcon} alt=""/> Country: {teamDetail.teams[0].strCountry}</h6>
+                    <h6><img width='15' src={sportType} alt=""/> Sport Type: {teamDetail.teams[0].strSport}</h6>
+                    <h6><img width='15' src={genderIcon} alt=""/> Gender: {teamDetail.teams[0].strGender}</h6>
                 </div>
-                <div>
-                    <img width='500px' src={Photo} alt="" />
+                <div className='image'>
+                    <img width='400px' src={Photo} alt="" />
                 </div>
             </div>
             <div>
