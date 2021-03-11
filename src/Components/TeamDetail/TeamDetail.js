@@ -46,7 +46,7 @@ const TeamDetail = () => {
                 <div className='social-media'>
                     <li><a href={strTwitter}><FontAwesomeIcon icon={faTwitter} /></a> </li>
                     <li><a href={strFacebook}><FontAwesomeIcon icon={faFacebook} /></a></li>
-                    <li><a href={strYoutube} target="_blank"><FontAwesomeIcon icon={faYoutube} /></a></li>
+                    <li><a href={strYoutube} ><FontAwesomeIcon icon={faYoutube} /></a></li>
                 </div>
             </div>
         </div>
