@@ -1,12 +1,13 @@
-.header{
+.header {
     height: 350px;
     background-image: url(../../Photo/background.jpg);
     background-repeat: no-repeat;
-    background-size:cover;
-    text-align: center;  
-    opacity: .5; 
+    background-size: cover;
+    text-align: center;
+    opacity: .5;
 }
-.header h1{
+
+.header h1 {
     padding-top: 125px;
     color: rgb(243, 251, 243);
     font-size: 75px;

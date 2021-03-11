@@ -9,16 +9,16 @@ const TeamCard = () => {
         const url = `https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League`;
         fetch(url)
             .then(response => response.json())
-            .then(data => setTeams(data)) ;         
+            .then(data => setTeams(data));
     }, []);
-    if(!teams.teams) { return null }
+    if (!teams.teams) { return null }
     return (
         <div className='teamCard'>
-            <div className="row">              
-                    {
-                       
-                        teams.teams.map(tm =><Team team={tm}></Team>)
-                    }
+            <div className="row">
+                {
+
+                    teams.teams.map(tm => <Team team={tm}></Team>)
+                }
             </div>
         </div>
     );

@@ -29,7 +29,7 @@ const TeamDetail = () => {
     if (gender === "male") {
         image = <img width='400px' src={Photo} alt="" />
     }
-    else{
+    else {
         image = <img width='400px' src={PhotoFemale} alt=""></img>
     }
 
@@ -47,19 +47,16 @@ const TeamDetail = () => {
                         <h6><img width='15' src={genderIcon} alt="" /> Gender: {strGender}</h6>
                     </div>
                     <div className='image'>
-                        {/* <img width='400px' src={Photo} alt="" /> */}
-                            {image}
-
-
+                        {image}
                     </div>
                 </div>
                 <div>
                     <p>{teamDetail.teams[0].strDescriptionEN}</p>
                 </div>
                 <div className='social-media'>
-                    <li><a href={strTwitter}><FontAwesomeIcon icon={faTwitter} /></a> </li>
-                    <li><a href={strFacebook}><FontAwesomeIcon icon={faFacebook} /></a></li>
-                    <li><a href={strYoutube} ><FontAwesomeIcon icon={faYoutube} /></a></li>
+                    <li><a href={`https://${strTwitter}`}><FontAwesomeIcon icon={faTwitter} /></a> </li>
+                    <li><a href={`https://${strFacebook}`}><FontAwesomeIcon icon={faFacebook} /></a></li>
+                    <li><a href={`https://${strYoutube}`} ><FontAwesomeIcon icon={faYoutube} /></a></li>
                 </div>
             </div>
         </div>
