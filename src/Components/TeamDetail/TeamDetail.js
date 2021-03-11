@@ -8,6 +8,7 @@ import countryIcon from '../../Icon/flag (1) 1.png';
 import sportType from '../../Icon/football (1) 1.png';
 import genderIcon from '../../Icon/male-gender-sign 1.png';
 import Photo from '../../Photo/male.png';
+import PhotoFemale from '../../Photo/female.png'
 import DetailHeader from '../DetailHeader/DetailHeader';
 
 
@@ -21,8 +22,17 @@ const TeamDetail = () => {
             .then(data => setTeamDetail(data));
     }, [idTeam]);
     if (!teamDetail.teams) { return null };
-    console.log(teamDetail);
-    const { strTeam, intFormedYear, strCountry, strSport, strGender, strFacebook, strYoutube, strTwitter } = teamDetail.teams[0]
+    const { strTeam, intFormedYear, strCountry, strSport, strGender, strFacebook, strYoutube, strTwitter } = teamDetail.teams[0];
+
+    const gender = strGender.toLowerCase();
+    let image;
+    if (gender === "male") {
+        image = <img width='400px' src={Photo} alt="" />
+    }
+    else{
+        image = <img width='400px' src={PhotoFemale} alt=""></img>
+    }
+
 
     return (
         <div>
@@ -37,7 +47,10 @@ const TeamDetail = () => {
                         <h6><img width='15' src={genderIcon} alt="" /> Gender: {strGender}</h6>
                     </div>
                     <div className='image'>
-                        <img width='400px' src={Photo} alt="" />
+                        {/* <img width='400px' src={Photo} alt="" /> */}
+                            {image}
+
+
                     </div>
                 </div>
                 <div>
