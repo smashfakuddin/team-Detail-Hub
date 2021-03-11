@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './TeamDetail.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter,faFacebook, faYoutube} from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { useParams } from 'react-router';
 import founded from '../../Icon/found 1.png';
 import countryIcon from '../../Icon/flag (1) 1.png';
@@ -20,7 +20,9 @@ const TeamDetail = () => {
             .then(res => res.json())
             .then(data => setTeamDetail(data));
     }, [idTeam]);
-    if (!teamDetail.teams) { return null }
+    if (!teamDetail.teams) { return null };
+    console.log(teamDetail);
+    const { strTeam, intFormedYear, strCountry, strSport, strGender, strFacebook, strYoutube, strTwitter } = teamDetail.teams[0]
 
     return (
         <div>
@@ -28,12 +30,11 @@ const TeamDetail = () => {
             <div className='team-detail'>
                 <div className='detail-cart'>
                     <div>
-                        <h1>{teamDetail.teams[0].strTeam}</h1>
-                        {/* <img src={teamDetail.teams[0].strTeamBadge} alt=""/> */}
-                        <h6><img width='15' src={founded} alt="" /> Founded: {teamDetail.teams[0].intFormedYear}</h6>
-                        <h6><img width='15' src={countryIcon} alt="" /> Country: {teamDetail.teams[0].strCountry}</h6>
-                        <h6><img width='15' src={sportType} alt="" /> Sport Type: {teamDetail.teams[0].strSport}</h6>
-                        <h6><img width='15' src={genderIcon} alt="" /> Gender: {teamDetail.teams[0].strGender}</h6>
+                        <h1>{strTeam}</h1>
+                        <h6><img width='15' src={founded} alt="" /> Founded: {intFormedYear}</h6>
+                        <h6><img width='15' src={countryIcon} alt="" /> Country: {strCountry}</h6>
+                        <h6><img width='15' src={sportType} alt="" /> Sport Type: {strSport}</h6>
+                        <h6><img width='15' src={genderIcon} alt="" /> Gender: {strGender}</h6>
                     </div>
                     <div className='image'>
                         <img width='400px' src={Photo} alt="" />
@@ -43,10 +44,9 @@ const TeamDetail = () => {
                     <p>{teamDetail.teams[0].strDescriptionEN}</p>
                 </div>
                 <div className='social-media'>
-                   <li><FontAwesomeIcon icon={faTwitter} /></li> 
-                   <li><FontAwesomeIcon icon={faFacebook} /></li>
-                   <li><FontAwesomeIcon icon={faYoutube} /></li>
-                    
+                    <li><a href={strTwitter}><FontAwesomeIcon icon={faTwitter} /></a> </li>
+                    <li><a href={strFacebook}><FontAwesomeIcon icon={faFacebook} /></a></li>
+                    <li><a href={strYoutube} target="_blank"><FontAwesomeIcon icon={faYoutube} /></a></li>
                 </div>
             </div>
         </div>

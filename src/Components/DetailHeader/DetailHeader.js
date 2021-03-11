@@ -2,9 +2,12 @@ import React from 'react';
 import './DetailHeader.css';
 
 const DetailHeader = (props) => {
-    const {strTeamBadge} =props.badge.teams[0];
+    const {strTeamBadge,strStadiumThumb} =props.badge.teams[0];
+    
     return (
-        <div className='detail-header'>
+        <div style={{ 
+            backgroundImage: `url('${strStadiumThumb}')` 
+          }}className='detail-header'>
             <img width='200' src={strTeamBadge} alt=""/>
         </div>
     );
